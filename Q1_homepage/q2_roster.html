@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIME-TABLE</title>
+</head>
+
+<body onload="javascript:timegen()">
+	
+	<button onclick="timegen()">Create Time-Table</button>
+	<p id="temp"></p>
+	<script>
+	function timegen(){
+		var arr =new Array(18);
+		for(let i=0;i < 18;i++){
+			while(arr[i]==null || arr[i]==undefined){
+				arr[i] = prompt("Enter a subject","ISS");
+			}
+		}
+		var dates = new Array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+		let text = "<table border='2'>";
+		for(let i=0;i<2;i++){
+			text += "<tr>";
+			text += "<td>"+ dates[3*i] + "</td>";
+			for(let j=0;j<6;j++){
+				text += "<td>"+ arr[j] + "</td>";
+			}
+			text+="</tr>";
+			text += "<tr>";
+			text += "<td>"+ dates[3*i+1] + "</td>";
+			for(let j=0;j<6;j++){
+				text += "<td>"+ arr[6+j] + "</td>";
+			}
+			text+="</tr>";
+			text += "<tr>";
+			text += "<td>"+ dates[3*i+2] + "</td>";
+			for(let j=0;j<6;j++){
+				text += "<td>"+ arr[12+j] + "</td>";
+			}
+			text+="</tr>";
+		}
+		text +="</table>";
+		document.getElementById("temp").innerHTML = text;
+	console.log(text);
+	}
+	</script>
+</body>
+</html>

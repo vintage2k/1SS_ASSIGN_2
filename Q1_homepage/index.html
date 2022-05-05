@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Rewanth Talasila!</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.38" />
+	<link rel="stylesheet" href="style.css">
+	<style id="lunk">
+		td{color: blue;}
+		body {
+			background-color: cyan;
+			text-align:center;
+			font-family:Arial;
+		}
+		iframe{
+			align:right;
+		}
+		h1 {
+			color: black;
+			
+	}
+		}
+	</style>
+</head>
+
+<body id="body" onload="settifunc()">
+	<h1> Welcome to my website ! (scroll down from the link to question 2)</h1>
+	<iframe width="500" height="500" src="https://files.catbox.moe/5r0lp0.mp4" autoplay=1 ></iframe> 
+	<table border = "4">
+		<tr>
+			<td>About Me</td>
+			<td>My name is Rewanth Talasila and I'm 18 years old</td>
+		</tr>
+
+         <tr>
+			<td>Profile Image</td>
+			<td><marquee scrollamount=150><img src="./imagefolder/me.jpg" alt="A picture of me"></marquee></td>
+		</tr>
+		<tr>
+			<td>Education Background</td>
+			<td>I did my +1 and +2 in FIITJEE junior college, I am currently enrolled in IIIT Hyderabad</td>
+		</tr>
+		<tr>
+			<td>Achievements</td>
+			<td><img src="https://c.tenor.com/aakCvuSEt4QAAAAC/angry-blade-runner.gif" alt="A picture of me"></td>
+		</tr>
+		<tr>
+			<td>Skills</td>
+			<td><img src="https://c.tenor.com/aakCvuSEt4QAAAAC/angry-blade-runner.gif" alt="A picture of me"></td>
+		</tr>
+		<tr>
+			<td>Announcements</td>
+			<td><p id = "news">Nothing of note.</p></td>
+		</td>
+	</table>
+	<br><br><br>
+	<input id="lol">
+	<button type="button" onclick="func()">Annouce</button>
+	<button type="button" onclick="clere()">Clear</button>
+	<script>
+	function clere(){
+		localStorage.setItem('anunc',"");
+		document.getElementById("news").innerHTML = "";
+	}
+	function func(){
+		let x = document.getElementById("lol").value;
+		let text = x + "<br>";
+		let shaf = localStorage.getItem('anunc');
+		if(shaf=="null" || shaf==null){
+			shaf=text;
+		}
+		else{
+			shaf += text;	
+		}
+		document.getElementById("news").innerHTML = shaf;
+		localStorage.setItem('anunc',shaf);
+		console.log(x);
+	}
+	function settifunc(){
+		let shaf = localStorage.getItem('anunc');
+		if(shaf=="null" || shaf==null){
+			localStorage.setItem("anunc","\0");
+			shaf = localStorage.getItem('anunc');
+		}
+		document.getElementById("news").innerHTML = shaf;
+	}
+	function lmao(){
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {color:black;}';
+		balls.innerHTML += 'body {background-color: cyan;}';
+		balls.innerHTML += 'td {color:blue;}';
+		balls.innerHTML += 'p {color:red;}';
+	}
+	function lmao2(){
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {color:black;}';
+		balls.innerHTML += 'body {background-color:grey;}';
+		balls.innerHTML += 'td {color:black;}';
+		balls.innerHTML += 'p {color:black;}';
+	}
+	function lol() {
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {color:orange;}';
+		balls.innerHTML += 'body {background-color:black;}';
+		balls.innerHTML += 'td {color:orange;}';
+		balls.innerHTML += 'p {color:green;}';
+
+	}	
+	function sad() {
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {color:pink;}';
+		balls.innerHTML += 'body {background-color:purple;}';
+		balls.innerHTML += 'td {color:pink;}';
+		balls.innerHTML += 'p {color:blue;}';
+	}	
+	function unreadable() {
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {color:black;}';
+		balls.innerHTML += 'body {background-color:white;}';
+		balls.innerHTML += 'td {color:black;}';
+		balls.innerHTML += 'p {color:black;}';
+	}	
+	function font1(){
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {font-size: 40px;}';
+		balls.innerHTML += 'td {font-size: 40px;}';
+		balls.innerHTML += 'p {font-size: 40px;}';
+	}
+	function font2(){
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {font-size: 60px;}';
+		balls.innerHTML += 'td {font-size: 20px;}';
+		balls.innerHTML += 'p {font-size: 40px;}';
+	}
+	function font3(){
+		const balls = document.querySelector('style');
+		balls.innerHTML += 'h1 {font-size: 60px;}';
+		balls.innerHTML += 'td {font-size: 10px;}';
+		balls.innerHTML += 'p {font-size: 10px;}';
+	}
+
+	</script>
+	</body>
+	<hr>
+	<br>
+		<a href="https://github.com/vintage2k">[My GitHub]</a>
+		<a href="https://twitter.com/elonmusk">[My Twitter]</a>
+		<a href="q2_roster.html">[Question 2]</a>
+	<br>
+	<br>
+	<hr>
+	<button onclick="lmao()">Theme 1</button>
+	<button onclick="lol()">Theme 2</button>
+	<button onclick="sad()">Theme 3</button>
+	<button onclick="lmao2()">Theme 4</button>
+	<button onclick="unreadable()">Theme 5</button>
+	<button onclick="font1()">Font 1</button>
+	<button onclick="font2()">Font 2</button>
+	<button onclick="font3()">Font 3</button>
+</html>
